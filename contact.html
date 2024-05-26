@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<!-- Link Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Logo Styling */
+.logo {
+  float: left;
+  margin-left: 20px; /* Adjust margin for spacing */
+  margin-right: 20px;
+  margin-top: 20px; /* Adjust margin for spacing */
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  background: linear-gradient(to right, #000d9c, #0066cc); /* Gradient background */
+  overflow: hidden;
+  height: 100px;
+  perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  margin: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for smooth animation */
+  transform-style: preserve-3d; /* Preserve 3D transformations */
+  transform-origin: 50% 50%; /* Set the transform origin */
+  font-weight: bold; /* Make font bold */
+  font-size: 18px; /* Decrease font size */
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add opacity to background on hover */
+  transform: translateY(-3px); /* Move the link up slightly on hover */
+}
+
+.navbar-right {
+  float: right;
+}
+
+/* Apply shadow to the navbar */
+.navbar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px; /* Adjust shadow depth */
+  background: rgba(0, 0, 0, 0.2); /* Shadow color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+ /* Logout Button Styling */
+ .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 8px 8px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+
+/* Contact Details Styling */
+.contact-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.contact-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 5px;
+}
+
+.suggestions-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Icon Styling */
+.icon {
+  margin-right: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="logo">
+  <img src="logo.png" alt="Logo" width="200">
+</div>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact Us</a>
+  
+  <div class="navbar-right">
+    <a href="logout.php" class="logout-btn">Logout</a>
+</div>
+</div>
+
+<div class="contact-container">
+  <h2 class="contact-title">Got queries, suggestions, compliments? Absolutely feel free to get in touch.</h2>
+  <div class="contact-details">
+    <p><i class="icon fas fa-envelope"></i>Email: <a href="mailto:info@cognifront.com">info@cognifront.com</a></p>
+    <p><i class="icon fas fa-phone"></i>Phone: <a href="tel:+919730045145">+919730045145</a></p>
+    <p><i class="icon fas fa-map-marker-alt"></i>Address: #1, Trishala, Ramnagar, Behind Mahalakshmi Theatre, Panchawati, Nashik 422003, Maharashtra, Bharat (India)</p>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>

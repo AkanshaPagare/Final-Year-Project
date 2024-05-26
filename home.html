@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        /* Logo Styling */
+        .logo {
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            background: linear-gradient(to right, #000d9c, #0066cc);
+            overflow: hidden;
+            height: 100px;
+            perspective: 1000px;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            margin: 10px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            transform-style: preserve-3d;
+            transform-origin: 50% 50%;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .navbar-right {
+            float: right;
+        }
+
+        .navbar:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            background: rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Logout Button Styling */
+        .logout-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 8px 8px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .logout-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Factory Layout Container */
+        .factory-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+        }
+
+        /* Factory Layout Editor Block */
+        .factory-layout {
+            border: 2px solid #333;
+            padding: 40px;
+            margin-right: 40px;
+            text-align: center;
+            cursor: pointer;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .factory-layout:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-5px) rotateX(10deg);
+        }
+
+        .factory-layout h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .factory-layout p {
+            font-size: 16px;
+        }
+
+        .factory-layout img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .factory-layout a {
+            display: block;
+            margin-top: 20px;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="logo">
+        <img src="logo.png" alt="Logo" width="200">
+    </div>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <div class="navbar-right">
+            <a href="logout.php" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="factory-container">
+        <div class="factory-layout" onclick="window.location.href='factory_layout_editor.php';">
+            <img src="FLE.png" alt="Image 1" width="500px" height="500px">
+            <h2>Factory Layout Editor</h2>
+            <p>Click here to edit the factory layout</p>
+        </div>
+        <div class="factory-layout" onclick="window.location.href='live_graph.php';">
+            <img src="graph.png" alt="Image 2">
+            <h2>Live Graph</h2>
+            <p>Click here to see data visualization</p>
+        </div>
+        <div class="factory-layout" onclick="window.location.href='live_data.php';">
+            <img src="thum.png" alt="Image 3">
+            <h2>Live Data</h2>
+            <p>Click here to see real-time data </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
